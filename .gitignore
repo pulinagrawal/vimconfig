@@ -1,9 +1,0 @@
-*
-!.vim/*
-!.vim*
-!.vim*/*
-!.gitignore
-
-.viminfo
-.vim_mru_files
-.vim_runtime
