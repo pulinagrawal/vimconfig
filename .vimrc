@@ -18,6 +18,7 @@ set laststatus=2
 "set fillchars+=stl:\ ,stlnc:\
 "set term=xterm-256color
 "set termencoding=utf-8
+set number
 
 
 "let g:miniBufExplForceSyntaxEnable = 1
