@@ -3,7 +3,7 @@
 "	.vim/bundle/plugin.git
 "
 "My mappings
-let mapleader=","
+"let mapleader=","
 no <up> ddkP
 no <down> ddp
 	" Auto complete mapping
@@ -33,16 +33,24 @@ nmap da, f,ld2F,i,<ESC>l
 nmap ca, f,ld2F,i,<ESC>a
 
 		"delete surrounding characters
- noremap ds{ F{xf}x
- noremap cs{ F{xf}xi
- noremap ds" F"x,x
- noremap cs" F"x,xi
- noremap ds' F'x,x
- noremap cs' F'x,xi
- noremap ds( F(xf)x
- noremap cs( F(xf)xi
- noremap ds) F(xf)x
- noremap cs) F(xf)xi)
+noremap ds{ F{xf}x
+noremap cs{ F{xf}xi
+noremap ds" F"x,x
+noremap cs" F"x,xi
+noremap ds' F'x,x
+noremap cs' F'x,xi
+noremap ds( F(xf)x
+noremap cs( F(xf)xi
+noremap ds) F(xf)x
+noremap cs) F(xf)xi)
+<div>
+
+" Putting brackets
+imap <leader>[ []<Esc>i
+imap <leader>( ()<Esc>i
+imap <leader>{ {}<Esc>i
+imap <leader>< < ><Esc>Xi
+imap <leader>> /\v<[a-zA-Z]* 
 
 execute pathogen#infect()
 syntax on
@@ -58,8 +66,16 @@ set t_Co=256
 "set termencoding=utf-8
 set number
 
-
-"let g:miniBufExplForceSyntaxEnable = 1
-"let g:Powerline_symbols = 'fancy'
-"let g:airline_powerline_fonts = 1
-
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+	
+set tabstop=4
+set expandtab
+set noswapfile
+set backup
+"" ==== Available keys========
+" [
+" ] 
+" z
+"
