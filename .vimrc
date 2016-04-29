@@ -25,13 +25,12 @@ noremap <F7> :set expandtab!<CR>
 nmap <Leader>h :tabnew %:h<CR>
 
 	"====== Custom comma motion mapping
-nmap di, f,dT,
-nmap ci, f,cT,
+nmap di, f,dt,
+nmap ci, f,lct,
 		 "delete argument 
 nmap da, f,ld2F,i,<ESC>l
 		 "delete arg and insert
 nmap ca, f,ld2F,i,<ESC>a
-
 		"delete surrounding characters
 noremap ds{ F{xf}x
 noremap cs{ F{xf}xi
@@ -43,7 +42,7 @@ noremap ds( F(xf)x
 noremap cs( F(xf)xi
 noremap ds) F(xf)x
 noremap cs) F(xf)xi)
-<div>
+noremap \"  Bi"<Esc>Ea"<Esc>
 
 " Putting brackets
 imap <leader>[ []<Esc>i
@@ -51,6 +50,7 @@ imap <leader>( ()<Esc>i
 imap <leader>{ {}<Esc>i
 imap <leader>< < ><Esc>Xi
 imap <leader>> /\v<[a-zA-Z]* 
+imap <leader>" Bi"<Esc>Ei"<Esc>
 
 execute pathogen#infect()
 syntax on
@@ -68,7 +68,7 @@ set number
 
 set notimeout
 set ttimeout
-set ttimeoutlen=10
+set ttimeoutlen=3
 	
 set tabstop=4
 set expandtab
@@ -79,3 +79,13 @@ set backup
 " ] 
 " z
 "
+
+"" ======= Latex-Suite =======
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+
+filetype plugin on
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+
