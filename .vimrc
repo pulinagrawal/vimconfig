@@ -73,7 +73,6 @@ set ttimeoutlen=3
 set tabstop=4
 set expandtab
 set noswapfile
-set backup
 "" ==== Available keys========
 " [
 " ] 
